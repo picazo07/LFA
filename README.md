@@ -10,8 +10,15 @@ The following block diagram illustrates the sequence employed in the LFA. The al
 
 
 # Training stage
+The LFA (Lung Finder Algorithm) utilizes the coordinates of the training images as their own features. For this purpose, a manual labeling of 400 randomly selected images was performed from the three classes (viral pneumonia, COVID-19, and normal) of the "COVID-19 Radiography Database" available on Kaggle. The manual labeling consists of placing points or landmarks on the image. The first landmark is located at the midpoint of the spine at the lung level, while the second one is also on the spine but at the lower part. The next two points represent the width of each lung and are placed at the height of the midpoint of the first two points, ensuring that the two lines representing the lung width and length are perpendicular to each other.
+
+To increase the diversity of the dataset and achieve a more balanced distribution, a data augmentation technique was employed. This involved creating artificial images with variations in translation and rotation. The translation ranged from -5 to 5 pixels, and the rotation from -10 to 10 degrees, as recommended in different references. This resulted in a total of 4400 augmented examples that were used for training. Additionally, these images underwent contrast enhancement using histogram equalization. To reduce computational time, the images were resized to 64x64 pixels, and the coordinates of the ROI were subsequently scaled to the desired size by the user.
+
+Once the images were prepared, the eigenfaces process was applied to reduce the dimensionality of the training set. The image below shows the arrangement of points Q and  the images created during the data augmentation process.
 
 
+
+![fig4](https://github.com/picazo07/LFA/assets/99782864/33dcf47a-61f3-4b77-9c73-732a822ccb85)
 
 # Test stage 
 
