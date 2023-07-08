@@ -1,4 +1,12 @@
 # Lung Finder Algorithm (LFA)
+Author: B.Eng. Angel Ernesto Picazo-Castillo // a.picazo.2505@gmail.com
+Director: Ph.D. Salvador E. Ayala-Raggi // saraggi@gmail.com
+Institute: Benemérita Universidad Autónoma de Puebla
+Country: Mexico
+
+
+
+
 # What is it?
 The LFA (Lung Finder Algorithm) is a new technique proposed for the normalization of the region of interest (the lungs) in chest radiographs. Through this process, the radiographic images from a database can be represented by new standardized images that are similar in rotation, scale, and contrast, i.e., they are normalized. These images can be used for classification in projects that utilize machine learning and/or deep learning, without the need for long computing times.
 
